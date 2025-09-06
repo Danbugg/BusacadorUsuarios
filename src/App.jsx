@@ -87,11 +87,11 @@ export default function App() {
         <p className="mt-6 text-center text-gray-600">Sin resultados para tu búsqueda.</p>
       )}  
 
-      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 mt-6">
+      {!buscando &&<div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 mt-6">
         {filtrados.map((usuario) => (
           <UserCard key={usuario.id} usuario={usuario} />
         ))}
-      </div>
+      </div>}
 
       <ToastContainer position="bottom-right" />
     </div>
